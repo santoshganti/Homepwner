@@ -1,5 +1,5 @@
 //
-//  BNRAppDelegate.h
+//  BNRItemsViewController.h
 //  HomePwner
 //
 //  Created by John Gallagher on 1/7/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface BNRItemsViewController : UITableViewController
 
 @end
