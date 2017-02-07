@@ -7,6 +7,7 @@
 //
 
 #import "BNRItemsViewController.h"
+#import "BNRDetailViewController.h"
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 
@@ -133,6 +134,20 @@
         // Enter editing mode
         [self setEditing:YES animated:YES];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BNRDetailViewController *detailViewController = [[BNRDetailViewController alloc] init];
+    
+    NSArray *items = [[BNRItemStore sharedStore] allItems];
+    BNRItem *selectedItem = items[indexPath.row];
+    
+    //Give detail view controller a pointer to the item object in row
+    detailViewController.item = selectedItem;
+    
+    //Push it onto the top of Navigation view controller stack
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
