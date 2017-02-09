@@ -24,6 +24,8 @@
     // Call the superclass's designated initializer
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"Homepwner";
     }
     return self;
 }
@@ -148,6 +150,13 @@
     
     //Push it onto the top of Navigation view controller stack
     [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 @end
