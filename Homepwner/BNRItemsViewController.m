@@ -49,7 +49,7 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"UITableViewCell"];    
+           forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 
@@ -130,7 +130,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
     [self.tableView reloadData];
 }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		732468FA1E48A2AD0014A582 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732468F81E48A2AD0014A582 /* BNRDetailViewController.m */; };
 		732468FB1E48A2AD0014A582 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 732468F91E48A2AD0014A582 /* BNRDetailViewController.xib */; };
+		73D84F821E5C5A8C0043EF36 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D84F811E5C5A8C0043EF36 /* BNRImageStore.m */; };
+		73D84F851E5C5B650043EF36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D84F841E5C5B650043EF36 /* UIKit.framework */; };
 		906A2DED1E2E56FA0059CA2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 906A2DEC1E2E56FA0059CA2B /* main.m */; };
 		906A2DF01E2E56FA0059CA2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 906A2DEF1E2E56FA0059CA2B /* AppDelegate.m */; };
 		906A2DF31E2E56FA0059CA2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 906A2DF21E2E56FA0059CA2B /* ViewController.m */; };
@@ -24,6 +26,9 @@
 		732468F71E48A2AD0014A582 /* BNRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDetailViewController.h; sourceTree = "<group>"; };
 		732468F81E48A2AD0014A582 /* BNRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDetailViewController.m; sourceTree = "<group>"; };
 		732468F91E48A2AD0014A582 /* BNRDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRDetailViewController.xib; sourceTree = "<group>"; };
+		73D84F801E5C5A8C0043EF36 /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		73D84F811E5C5A8C0043EF36 /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
+		73D84F841E5C5B650043EF36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		906A2DE81E2E56FA0059CA2B /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		906A2DEC1E2E56FA0059CA2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		906A2DEE1E2E56FA0059CA2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,17 +52,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D84F851E5C5B650043EF36 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73D84F831E5C5B650043EF36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73D84F841E5C5B650043EF36 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		906A2DDF1E2E56FA0059CA2B = {
 			isa = PBXGroup;
 			children = (
 				906A2DEA1E2E56FA0059CA2B /* Homepwner */,
 				906A2DE91E2E56FA0059CA2B /* Products */,
+				73D84F831E5C5B650043EF36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +117,6 @@
 				906A2E071E2E5A4F0059CA2B /* BNRItemsViewController.m */,
 				732468F71E48A2AD0014A582 /* BNRDetailViewController.h */,
 				732468F81E48A2AD0014A582 /* BNRDetailViewController.m */,
-				732468F91E48A2AD0014A582 /* BNRDetailViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +124,7 @@
 		906A2E031E2E5A080059CA2B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				732468F91E48A2AD0014A582 /* BNRDetailViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -121,6 +136,8 @@
 				906A2E0D1E2E5C660059CA2B /* BNRItem.m */,
 				906A2E0F1E2E5D240059CA2B /* BNRItemStore.h */,
 				906A2E101E2E5D240059CA2B /* BNRItemStore.m */,
+				73D84F801E5C5A8C0043EF36 /* BNRImageStore.h */,
+				73D84F811E5C5A8C0043EF36 /* BNRImageStore.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -211,6 +228,7 @@
 				906A2DF01E2E56FA0059CA2B /* AppDelegate.m in Sources */,
 				906A2E0E1E2E5C660059CA2B /* BNRItem.m in Sources */,
 				732468FA1E48A2AD0014A582 /* BNRDetailViewController.m in Sources */,
+				73D84F821E5C5A8C0043EF36 /* BNRImageStore.m in Sources */,
 				906A2DED1E2E56FA0059CA2B /* main.m in Sources */,
 				906A2E081E2E5A4F0059CA2B /* BNRItemsViewController.m in Sources */,
 				906A2E111E2E5D240059CA2B /* BNRItemStore.m in Sources */,
